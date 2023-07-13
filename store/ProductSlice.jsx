@@ -36,5 +36,13 @@ export const productSlice = createSlice({
     }
 })
 export const selectStatus= (state) => state.products.status;
-export const selectFuturesProduct = (state) => state.products.products.filter((item)=>item.is_featured)
+export const selectFuturesProduct = (state) =>
+        state.products.products.filter((item)=>item.is_featured)
+export const selectHeadphones = (state) => 
+        state.products.products.filter((item)=>item.category === 'headphones');
+export const selectSpeakers = (state) => 
+        state.products.products.filter((item)=> item.category === 'speakers');
+export const selectEarphones = (state) => 
+        state.products.products.filter((item)=> item.category === 'earphones');
+    
 export default productSlice.reducer;
